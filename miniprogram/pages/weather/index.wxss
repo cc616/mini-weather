@@ -1,0 +1,10 @@
+/* miniprogram/pages/weather/index.wxss */
+.location {
+  font-size: 24rpx;
+  display: flex;
+  justify-content: center;
+  /* width: 50%;
+  overflow: hidden;
+  word-break: normal;
+  text-overflow: ellipsis; */
+}

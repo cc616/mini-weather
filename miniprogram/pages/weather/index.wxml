@@ -1,0 +1,25 @@
+<!--miniprogram/pages/weather/index.wxml-->
+<view class="weather-wrapper">
+  <view class="container">
+    <view class="now-weather">
+      <view class="location" bindtap="handleChooseLocation">
+        <text>{{ address }}</text>
+      </view>
+      <view class="air-quality">
+        空气质量
+      </view>
+      <view class="current">
+        <view class="temperature">温度</view>
+        <view>小雨</view>
+        <view>温度98%|东南风</view>
+        <view>现在的温度比较舒适～</view>
+      </view>
+    </view>
+    <view class="tips">今明两天的天气</view>
+  </view>
+  <view class="other" style="background-color: {{ bgColor }}">
+    <view class="container">24小时天气</view>
+    <view class="week-waether">一周天气</view>
+    <view class="life-style">生活指数</view>
+  </view>
+</view>

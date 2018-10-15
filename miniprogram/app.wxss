@@ -1,0 +1,10 @@
+/**app.wxss**/
+.container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; */
+  margin-bottom: 20rpx;
+  max-width: 750rpx;
+  box-sizing: border-box;
+}
