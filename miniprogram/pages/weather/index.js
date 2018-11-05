@@ -1,5 +1,6 @@
 // miniprogram/pages/weather/index.js
 const getGeocoder = require('../../api/map.js')
+const weather = require('../../api/weather.js')
 
 Page({
 
@@ -81,9 +82,23 @@ Page({
         this.setData({
           address,
         })
+
+        this.getWeather(latitude, longitude)
       }
     }, () => {
       wx.hideLoading()
+    })
+  },
+
+  getWeather(latitude, longitude) {
+    console.log(latitude, longitude)
+    weather.getWeather(latitude, longitude, (res) => {
+      console.log(res)
+      const { data = {}, statusCode } = res
+      if (statusCode === 200) {
+        const { HeWeather6 = [] } = data
+        const weather = HeWeather6[0]
+      }
     })
   },
 
