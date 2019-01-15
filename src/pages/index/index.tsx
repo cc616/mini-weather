@@ -41,7 +41,7 @@ interface Index {
 
 @connect(({ counter }) => ({
   counter
-}), (dispatch) => ({
+}), (dispatch: any) => ({
   add () {
     dispatch(add())
   },

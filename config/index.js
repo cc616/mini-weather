@@ -1,5 +1,5 @@
 const config = {
-  projectName: 'myApp',
+  projectName: 'mini-weather',
   date: '2018-11-5',
   designWidth: 750,
   sourceRoot: 'src',

@@ -1,0 +1,126 @@
+.weather-wrapper {
+  color: #fff;
+  height: 100%;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .location {
+    text-align: center;
+  }
+
+  .air-quality {
+    margin-left: 10px;
+    line-height: 28px;
+    margin-top: 40px;
+    
+    &-container {
+      display: inline;
+      padding: 16px 20px;
+      border-radius: 8px;
+      
+      background: rgba(0, 0, 0, .1);
+    }
+
+    &-icon {
+      height: 28px;
+      width: 8px;
+      border-radius: 4px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .current {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    text-align: center;
+
+    .temperature {
+      font-weight: lighter;
+      font-size: 240px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      &-degree {
+        font-weight: lighter;
+        left: 16px;
+        top: -8px;
+        font-size: 80px;
+      }
+    }
+
+    &-line {
+      line-height: 46px;
+    }
+  }
+
+  .today-and-tomorrow {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    line-height: 48px;
+    margin-top: 20px;
+
+    &-line {
+      position: absolute;
+      content: " ";
+      background: #fff;
+      width: 2px;
+      height: 80px;
+      top: 8px;
+      left: 50%;
+      margin-left: -1px;
+    }
+
+    .today-item,
+    .tomorrow-item {
+      width: 50%;
+      display: flex;
+      padding: 0 28px 0 40px;
+      justify-content: space-between;
+
+      &-temperature {
+        position: relative;
+      }
+    }
+
+    .degree {
+      position: absolute;
+      top: -16px;
+    }
+  }
+
+  .hourly-weather {
+    background: rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 28px;
+    margin-top: 32px;
+    text-align: center;
+    width: 928px;
+
+    .temperature {
+      position: relative;
+    }
+
+    .degree {
+      position: absolute;
+      top: -16px;
+    }
+  }
+
+  .week-weather {
+    background: rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 28px;
+    margin-top: 32px;
+    width: 928px;
+  }
+}

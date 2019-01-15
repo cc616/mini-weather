@@ -1,0 +1,5 @@
+export const LOCATION = 'LOCATION'
+export const WEEK_WEATHER = 'WEEK_WEATHER'
+export const CURRENT_WEATHER = 'CURRENT_WEATHER'
+export const CURRENT_AIR = 'CURRENT_AIR'
+export const HOURLY_WEATHER = 'HOURLY_WEATHER'
