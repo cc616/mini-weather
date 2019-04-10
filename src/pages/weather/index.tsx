@@ -13,7 +13,6 @@ import {
 } from '../../actions/weather'
 
 import './style.scss'
-import { IWeather } from 'src/typing/weather';
 
 type PageStateProps = {
   location: IWeather.ILocation,
@@ -104,7 +103,7 @@ class Weather extends Component {
 
   render() {
     const { location, weekWeather, air, current, hourlyWeather } = this.props
-    const { address } = location
+    const { address, district } = location
     const today = weekWeather[0]
     const tomorrow = weekWeather[1]
 
@@ -112,6 +111,9 @@ class Weather extends Component {
     return (
       <View className="weather-wrapper">
         <View className="container" style="background: #62aadc">
+          <View>
+            {district}
+          </View>
           <View className="location" onClick={this.handleChooseLocation}>
             {address}
           </View>

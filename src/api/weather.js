@@ -26,8 +26,8 @@ const getCurrentWeather = (lat, lon) => {
   })
 }
 
-const getCurrentAir = (/*lat, lon*/) => {
-  const url = `${API_URL}/air/now?location=30.65946198,104.06573486&key=${username}`
+const getCurrentAir = (lat, lon) => {
+  const url = `${API_URL}/air/now?location=${lat},${lon}&key=${username}`
   return new Promise((resolve, reject) => {
     Taro.request({
       url,

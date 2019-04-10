@@ -1,7 +1,10 @@
 import { LOCATION, WEEK_WEATHER, CURRENT_WEATHER, CURRENT_AIR, HOURLY_WEATHER } from '../constants/weather'
 
 const INITIAL_STATE = {
-  location: {},
+  location: {
+    address: null,
+    district: null,
+  },
   weekWeather: [],
   air: {
     status: 0,

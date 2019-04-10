@@ -1,5 +1,3 @@
-import weather from "src/pages/weather";
-
 declare namespace IWeather {
   interface ILocationBase {
     lat: number,
@@ -8,6 +6,7 @@ declare namespace IWeather {
 
   interface ILocation extends ILocationBase {
     address: string,
+    district: string,
   }
 
   interface IWeatherItem {

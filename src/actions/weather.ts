@@ -5,10 +5,10 @@ export const fetchLocation = () => {
   return async (dispatch) => {
     try {
       const res = await locationApi.getLocation()
-      const { latitude: lat, longitude: lon, address = '' } = res
+      const { latitude: lat, longitude: lon, address_component: address = {} } = res
       dispatch({
         type: LOCATION,
-        data: { lat, lon, address },
+        data: { lat, lon, city: address.city, district: address.district },
       })
     } catch (error) {
       console.log(error)
@@ -23,10 +23,13 @@ export const fetchGeocoder = (lat, lon) => {
       const { data, statusCode } = res
       console.log(res)
       if (statusCode === 200) {
-        const { result: { address } } = data
+        const { result: { address, address_component, } } = data
         dispatch({
           type: LOCATION,
-          data: { address },
+          data: {
+            address,
+            district: address_component.district,
+          },
         })
       }
     } catch (error) {
@@ -42,7 +45,8 @@ export const fetchCurrentAir = (lat, lon) => {
       const { data, statusCode } = res
       if (statusCode === 200) {
         const { HeWeather6 } = data
-        const { air_now_city: air } = HeWeather6[0]
+        const { air_now_city: air = {} } = HeWeather6[0]
+        console.log(res)
         dispatch({
           type: CURRENT_AIR,
           data: {
